@@ -28,5 +28,10 @@ class PrefManager {
             return getInstance(ctx).getStringSet(MYACTIVITY, mutableSetOf()) as MutableSet<String>
         }
 
+        fun getActivity(ctx:Context):String{
+
+            return getInstance(ctx).getString("ACTIVITIES"))
+        }
+
     }
 }

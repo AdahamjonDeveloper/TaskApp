@@ -22,17 +22,10 @@ class AdapterActivity : RecyclerView.Adapter<AdapterActivity.ViewHolder>() {
             val activities = text.split("$")
 
             binding.checkboxTask.text = activities[0]
-//            binding.tvTime.text = activities[1]
-
-
-
+            binding.tvTime.text = activities[1]
 
         }
-
     }
-
-
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val root = ItemActivityBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -42,7 +35,6 @@ class AdapterActivity : RecyclerView.Adapter<AdapterActivity.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(list.elementAt(position))
     }
-
     override fun getItemCount(): Int {
         return list.size
     }

@@ -58,7 +58,7 @@ class AddActivityDialog : DialogFragment() {
                 val current = sdf.format(Date())
 
                 val activity =
-                    "${binding.checkboxTask.text.toString()}$current"
+                    "${binding.checkboxTask.text.toString()}$${current}"
                 PrefManager.saveActivity(requireContext(), activity)
                 dismiss()
 
